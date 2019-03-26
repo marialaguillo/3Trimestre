@@ -14,8 +14,8 @@
                     "border-top-right-radius":"15px",
                     "border-bottom-right-radius":"15px"
                 },
-                5000
-                );
+                5000,
+                    console.log("Se ha cargado el 100%"));                   
             });
             $("#btn-rem").click(function(){
                 $("#percentage").animate({
@@ -24,10 +24,11 @@
                     "border-bottom-right-radius":"0px"
                 },
                 5000,
-                );
+                    console.log("Se ha descargado al 1%"));           
             });
             $("#btn-stop").click(function(){
-                $("#percentage").stop()
+                $("#percentage").stop(), 
+                console.log("Se ha parado");           
                    
             });
         });

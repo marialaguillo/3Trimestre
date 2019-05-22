@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           var base=prompt("Tamaño de la base: ");
+           var altura=prompt("Tamaño de la altura: ");
+
+           $("#outputarea").html("El area es: "+ base*altura);
+           $("#outputperimetro").html("El perimetro es: "+((2*base)+(2*altura)));
+// si no ponemos entre parentesis la formula aparecera un número al lado del otro pero no hará la suma, 
+// si ponemos parseInt(prompt....) cogera lo que haya dentro como un integral y no tendriamos que poner 
+// tantos parentesis
+
+        });
+    </script>
+</head>
+    <body>
+<p id="outputarea"></p>
+<p id="outputperimetro"></p>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var minutos = prompt("Introduce los minutos: ");
+            var min = (minutos % 60);
+            var hor = ((minutos - min) / 60);
+            var m;
+            var h;
+
+            if (minutos == null || minutos == 0) {
+                $("#output").html("No hay tiempo");
+            }
+            else if (!isNaN(minutos)) {
+                if (min > 1) {
+                    m = (min + " minutos.");
+                }
+                else if (min == 0) {
+                    m = (".");
+                }
+                else {
+                    m = (min + " minuto.");
+                }
+
+                if (hor > 1) {
+                    h = (hor + " horas ");
+                }
+                else if (hor == 0) {
+                    h = (" ");
+                }
+                else {
+                    h = (hor + " hora ");
+                }
+
+                $("#output").html("El tiempo es " + h + m);
+            }
+            else {
+                $("#output").html("Caracter no valido");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

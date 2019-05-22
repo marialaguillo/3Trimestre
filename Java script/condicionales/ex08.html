@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure07</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a=prompt("Introduzca una nota");
+            var b=prompt("Introduzca una edad");
+            var c=prompt("Introduzca un sexo M o F");
+            if (a>4 && b>17 && c==="F")
+            {
+                $("#output").html("Aceptada");
+            }
+            else if (a>4 && b>17 && c==="M")
+            {
+                $("#output").html("Posible");
+            }
+            else
+            {
+                $("#output").html("No aceptada");
+            }
+        });
+    </script>
+</head>
+<body> 
+    <p id="output"></p>
+</body>
+</html>

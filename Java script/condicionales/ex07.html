@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var n = parseInt(prompt("Introduce un número de base: "));
+            var m = parseInt(prompt("Introduce un número de exponente: "));
+            var l = Math.pow(n, m);
+            var o = (m*(-1));
+            var p = Math.pow(n, o); 
+        //Para exponente Math.pow(base, exponente)
+        
+
+            if (m>0) {
+                $("#output").html("La potencia es "+l);
+            }
+            else if (m==0) {
+                $("#output").html("La potencia es 1");
+            }
+    
+            else {
+                $("#output").html("la potencia es 1/"+p);
+            }
+            
+            
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

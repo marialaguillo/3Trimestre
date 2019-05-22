@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           var a=parseInt(prompt("1º Venta: "));
+           var b=parseInt(prompt("2º Venta: "));
+           var c=parseInt(prompt("2º Venta: "));
+           var d=parseInt((a+b+c)*0.1);
+
+           $("#outputcomisiones").html("Las comisiones son: "+ d);
+           $("#outputtotal").html("El sueldo total es : "+ (d+a+b+c));
+        });
+    </script>
+</head>
+    <body>
+<p id="outputcomisiones"></p>
+<p id="outputtotal"></p>
+    </body>
+</html>

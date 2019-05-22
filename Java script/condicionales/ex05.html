@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var n = prompt("Introduce usuario: ");
+            var m = prompt("Introduce contraseña: ");
+        //Para comparar cadenas de caracteres hay que poner ===
+        // && sirve para poner más de una condición a la vez (y)
+
+            if (n==="pepe" && m==="asdasd") {
+                $("#output").html("Has entrado en el sistema");
+            }
+            else if (n!=="pepe" && m==="asdasd") {
+                $("#output").html("Usuario incorrecto");
+            }
+            else if (n==="pepe" && m!=="asdasd") {
+                $("#output").html("Contraseña incorrecta");
+            }
+            else {
+                $("#output").html("Usuario y contraseña incorrectos");
+            }
+            
+            
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

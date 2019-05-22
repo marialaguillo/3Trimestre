@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var n = prompt("Introduce una letra: ");
+            var m = n.toUpperCase();
+            var l = n.toLowerCase();
+        //Para comparar cadenas de caracteres hay que poner ===
+        // && sirve para poner más de una condición a la vez (y)
+        // Para detectar una mayuscula .toUpperCase para minuscula .toLowerCase
+
+            if (n==m) {
+                $("#output").html("La letra es mayuscula");
+            }
+            else if (n==l) {
+                $("#output").html("La letra es minuscula");
+            }
+    
+            else {
+                $("#output").html("Caracter no valido");
+            }
+            
+            
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

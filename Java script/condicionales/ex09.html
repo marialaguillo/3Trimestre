@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a=parseInt(prompt("Introduzca un número:"));
+            var b=parseInt(prompt("Introduzca un número:"));
+            var c=parseInt(prompt("Introduzca un número:"));
+            if (a>b && b>c)
+            {
+                $("#output").html(a+" > "+b+" > "+c+" > ");
+            }
+            else if (a>b && b<c && c<a)
+            {
+                $("#output").html(a+" > "+c+" > "+b+" > ");
+            }
+            else if (b>a && a>c )
+            {
+                $("#output").html(b+" > "+a+" > "+c+" > ");
+            }
+            else if (b>a && a<c && b>c)
+            {
+                $("#output").html(b+" > "+c+" > "+a+" > ");
+            }
+            else if (c>a && a>b)
+            {
+                $("#output").html(c+" > "+a+" > "+b+" > ");
+            }
+            else if (c>a && a<b)
+            {
+                $("#output").html(c+" > "+b+" > "+a+" > ");
+            }
+            else if (b>a && b<c)
+            {
+                $("#output").html(c+" > "+b+" > "+a+" > ");
+            }
+            else
+            {
+                $("#output").html("Los valores introducidos no son validos");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

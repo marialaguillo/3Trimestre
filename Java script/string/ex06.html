@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 6 cadena de caracteres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var str=prompt("Introduzca una palabra");
+            var strRev ="";
+            var i=0;
+            while(i<str.length){
+                strRev = str[i]+strRev;
+                i++;
+            }  
+            $("#salida").html("La palabra introducida es '"+str+"'. Su invertida es '"+strRev+"'.");          
+        });
+    </script>
+</head>
+
+<body>
+    <p></p>
+    <p id="salida"></p>
+</body>
+
+</html>

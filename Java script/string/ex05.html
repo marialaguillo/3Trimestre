@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 5 cadena de caracteres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var name=prompt("Introduzca nombre y apellidos");
+            var nDiv=name.split(" ");
+            var nI=nDiv[0].charAt(0).toUpperCase();
+            var a1=nDiv[1].charAt(0).toUpperCase();
+            var a2=nDiv[2].charAt(0).toUpperCase();
+            $("#salida").html("Su nombre es: "+name+".Y sus inciales: " +nI+a1+a2);
+        });
+    </script>
+</head>
+
+<body>
+    <p></p>
+    <p id="salida"></p>
+</body>
+
+</html>

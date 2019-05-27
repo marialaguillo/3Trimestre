@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 9 cadena de caracteres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var str=prompt("Introduzca una frase");
+            var str2=prompt("Introducir palabra a buscar");
+            var x=str.includes(str2);
+            if(x){
+                $("#salida").html("La frase '"+str+"' contiene a la palabra '"+str2+"'.");
+            }
+            else{
+                $("#salida").html("La frase '"+str+"' NO contiene a la palabra '"+str2+"'.");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p></p>
+    <p id="salida"></p>
+</body>
+
+</html>

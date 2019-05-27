@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 2 Bucles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           
+           var a=parseInt(Math.random()*100);
+           alert(a);
+           var num=prompt("Adivina el número");
+           var i=1;
+           while(num!=a && i<10){
+                if (num<a)
+                {
+                    alert("Buscas un número mayor");
+                }
+                else
+                {
+                    alert("Buscas un número menor");
+                }
+                var num=prompt("Intentalo de nuevo");
+                if(num!=a){
+                    i++;
+                }
+           }
+           if (i==10)
+           {
+               $("#salida").html("No hay más intentos")
+           }
+           else
+           {
+               $("#salida").html("Has acertado en "+i+" intentos")
+           }      
+       });
+    </script>
+</head>
+<body>
+    <p></p>
+    <p id="salida"></p>
+</body>
+</html>

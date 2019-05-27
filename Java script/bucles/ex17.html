@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 17 Bucles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var e=parseInt(prompt("Numero de empleados"));
+            var p=parseInt(prompt("Cuanto se paga la hora"));
+            var i=1;
+            var sum=0;
+            while (i<=e)
+            {
+                var h=parseInt(prompt("Numero de horas semanales del empleado "+i));
+                var tot=h*p;
+                var sum=sum+tot;
+                $("#salida").append("El empleado "+i+" trabaja "+h+" horas y recibe un pago de "+tot+"€<br/>");
+                i++;
+            }
+            $("#salida").prepend("Al final paga un total de "+sum+"€<br/>");
+        });
+    </script>
+</head>
+
+<body>
+    <p></p>
+    <p id="salida"></p>
+</body>
+
+</html>
